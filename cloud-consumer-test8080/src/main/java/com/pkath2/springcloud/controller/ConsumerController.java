@@ -19,7 +19,8 @@ import java.util.List;
 @RequestMapping("/testconsumer")
 public class ConsumerController {
 
-    public static final String PROVIDER_URL = "http://10.1.1.119:8001";
+//    public static final String PROVIDER_URL = "http://10.1.1.134:8001";
+    public static final String PROVIDER_URL = "http://192.168.55.115:8001";
 
     @Autowired
     private RestTemplate restTemplate;
