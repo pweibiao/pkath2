@@ -14,10 +14,22 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CommonResult<T> {
     private Integer code;
-    private String message;
     private T date;
 
-    public CommonResult(Integer code, String message) {
-        this(code, message, null);
+    public CommonResult(Integer code) {
+        super();
+        this.code = code;
+    }
+
+    public static <T> CommonResult<T> newInstance() {
+        return new CommonResult<T>(200);
+    }
+
+    public static <T> CommonResult<T> success(){
+        return newInstance();
+    }
+
+    public static <T> CommonResult<T> success(T entity){
+        return new CommonResult(200, entity);
     }
 }

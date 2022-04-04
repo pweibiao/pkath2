@@ -1,5 +1,7 @@
 package com.pkath2.springcloud.controller;
 
+import com.pkath2.springcloud.Common.BaseController;
+import com.pkath2.springcloud.Common.CommonResult;
 import com.pkath2.springcloud.entities.TestPojo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,17 +19,18 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/testconsumer")
-public class ConsumerController {
+public class ConsumerController extends BaseController {
 
 //    public static final String PROVIDER_URL = "http://10.1.1.134:8001";
-    public static final String PROVIDER_URL = "http://192.168.55.115:8001";
+    public static final String PROVIDER_URL = "http://127.0.0.1:8001";
 
     @Autowired
     private RestTemplate restTemplate;
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public TestPojo create(TestPojo pojo) {
-        return restTemplate.postForObject(PROVIDER_URL+"/test", pojo, TestPojo.class);
+    public CommonResult<TestPojo> create(TestPojo pojo) {
+        restTemplate.postForObject(PROVIDER_URL+"/test", pojo, TestPojo.class);
+        return success();
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
@@ -36,7 +39,7 @@ public class ConsumerController {
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public List<TestPojo> selectList() {
-        return restTemplate.getForObject(PROVIDER_URL+"/test/list", List.class);
+    public CommonResult<List<TestPojo>> selectList() {
+        return success(restTemplate.getForObject(PROVIDER_URL+"/test/list", List.class));
     }
 }
