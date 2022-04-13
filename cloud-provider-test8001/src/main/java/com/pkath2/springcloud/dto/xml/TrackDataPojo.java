@@ -20,4 +20,19 @@ public class TrackDataPojo {
     @JacksonXmlProperty(localName = "visitTimes")
     private String visitTimes;
 
+    public String getTrackRecordId() {
+        return trackRecordId;
+    }
+
+    public void setTrackRecordId(String trackRecordId) {
+        this.trackRecordId = trackRecordId;
+    }
+
+    public String getVisitTimes() {
+        return visitTimes;
+    }
+
+    public void setVisitTimes(String visitTimes) {
+        this.visitTimes = visitTimes;
+    }
 }

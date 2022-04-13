@@ -53,4 +53,60 @@ public class CrmStatusPojo extends BaseXMLDto {
      */
     @JacksonXmlProperty(localName = "crmData")
     private String crmData;
+
+    public String getVisitorId() {
+        return visitorId;
+    }
+
+    public void setVisitorId(String visitorId) {
+        this.visitorId = visitorId;
+    }
+
+    public String getCrmStatus() {
+        return crmStatus;
+    }
+
+    public void setCrmStatus(String crmStatus) {
+        this.crmStatus = crmStatus;
+    }
+
+    public String getStaffId() {
+        return staffId;
+    }
+
+    public void setStaffId(String staffId) {
+        this.staffId = staffId;
+    }
+
+    public String getStaffLogname() {
+        return staffLogname;
+    }
+
+    public void setStaffLogname(String staffLogname) {
+        this.staffLogname = staffLogname;
+    }
+
+    public String getStaffName() {
+        return staffName;
+    }
+
+    public void setStaffName(String staffName) {
+        this.staffName = staffName;
+    }
+
+    public OwnerDataPojo getOwnerData() {
+        return ownerData;
+    }
+
+    public void setOwnerData(OwnerDataPojo ownerData) {
+        this.ownerData = ownerData;
+    }
+
+    public String getCrmData() {
+        return crmData;
+    }
+
+    public void setCrmData(String crmData) {
+        this.crmData = crmData;
+    }
 }

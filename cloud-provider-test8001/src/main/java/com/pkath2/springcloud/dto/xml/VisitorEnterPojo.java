@@ -34,4 +34,36 @@ public class VisitorEnterPojo extends BaseXMLDto {
      */
     @JacksonXmlProperty(localName = "trackData")
     private TrackDataPojo trackData;
+
+    public MetaDataDto getMetaData() {
+        return metaData;
+    }
+
+    public void setMetaData(MetaDataDto metaData) {
+        this.metaData = metaData;
+    }
+
+    public VisitorDataDto getVisitorData() {
+        return visitorData;
+    }
+
+    public void setVisitorData(VisitorDataDto visitorData) {
+        this.visitorData = visitorData;
+    }
+
+    public RouteDataDto getRouteData() {
+        return routeData;
+    }
+
+    public void setRouteData(RouteDataDto routeData) {
+        this.routeData = routeData;
+    }
+
+    public TrackDataPojo getTrackData() {
+        return trackData;
+    }
+
+    public void setTrackData(TrackDataPojo trackData) {
+        this.trackData = trackData;
+    }
 }

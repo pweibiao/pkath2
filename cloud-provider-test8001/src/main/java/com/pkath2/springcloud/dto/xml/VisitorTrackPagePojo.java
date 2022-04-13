@@ -22,4 +22,28 @@ public class VisitorTrackPagePojo extends BaseXMLDto {
      */
     @JacksonXmlProperty(localName = "pageData")
     private PageDataPojo pageData;
+
+    public String getTrackRecordId() {
+        return trackRecordId;
+    }
+
+    public void setTrackRecordId(String trackRecordId) {
+        this.trackRecordId = trackRecordId;
+    }
+
+    public String getVisitPageDatas() {
+        return visitPageDatas;
+    }
+
+    public void setVisitPageDatas(String visitPageDatas) {
+        this.visitPageDatas = visitPageDatas;
+    }
+
+    public PageDataPojo getPageData() {
+        return pageData;
+    }
+
+    public void setPageData(PageDataPojo pageData) {
+        this.pageData = pageData;
+    }
 }
